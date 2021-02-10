@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+    <meta charset="UTF-8">
+    <title>User Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="user-admin.style.client.css"/>
+    <link href="user-admin.style.client.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../services/user.service.client.js"></script>
+    <script src="user-admin.controller.client.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="container-fluid">
+    <h1>User Admin</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+            <th>&nbsp;</th>
+        </tr>
+
+        <tr class="wbdv-form">
+            <td><input id="usernameFld" class="form-control wbdv-username-fld"
+                       placeholder="Username" /></td>
+            <td><input id="passwordFld" class="form-control wbdv-password-fld" type="password"
+                       placeholder="Password" />
+            </td>
+            <td><input id="firstNameFld" class="form-control wbdv-firstname-fld"
+                       placeholder="First Name" /></td>
+            <td><input id="lastNameFld" class="form-control wbdv-lastname-fld"
+                       placeholder="Last Name" /></td>
+            <td><select id="roleFld" class="form-control wbdv-role-fld">
+                <option value="FACULTY">Faculty</option>
+                <option value="STUDENT">Student</option>
+                <option value="ADMIN">Admin</option>
+            </select></td>
+            <td><span class="float-right page">
+
+                <i class="fa-2x fa fa-search wbdv-search"></i>
+                <i class="fa-2x fa fa-plus wbdv-create"></i>
+                <i class="fa-2x fa fa-check wbdv-update"></i>
+
+<!--                        <button class="wbdv-search">Search</button>-->
+<!--                        <button class="wbdv-create">Create</button>-->
+<!--                        <button class="wbdv-update">Update</button>-->
+                </span></td>
+        </tr>
+
+<!--        <tr class="wbdv-template wbdv-user wbdv-hidden">-->
+<!--            <td class="wbdv-username">RAJESHCHINNAGA</td>-->
+<!--            <td class="wbdv-password">Rajesh$2919</td>-->
+<!--            <td class="wbdv-first-name">RAJESH</td>-->
+<!--            <td class="wbdv-last-name">CHINNAGA</td>-->
+<!--            <td class="wbdv-role">Student</td>-->
+<!--            <td class="wbdv-actions">-->
+<!--                <span class="float-right">-->
+<!--                  <button class="wbdv-remove">Delete</button>-->
+<!--                  <button class="wbdv-edit">Update</button>-->
+<!--                </span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr class="wbdv-template wbdv-user wbdv-hidden">-->
+<!--            <td class="wbdv-username">LOKESHCHINNAGA</td>-->
+<!--            <td class="wbdv-password">Lokesh$2919</td>-->
+<!--            <td class="wbdv-first-name">LOKESH</td>-->
+<!--            <td class="wbdv-last-name">CHINNAGA</td>-->
+<!--            <td class="wbdv-role">Admin</td>-->
+<!--            <td class="wbdv-actions">-->
+<!--                <span class="float-right">-->
+<!--                  <button class="wbdv-remove">Delete</button>-->
+<!--                  <button class="wbdv-edit">Update</button>-->
+<!--                </span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr class="wbdv-template wbdv-user wbdv-hidden">-->
+<!--            <td class="wbdv-username">PADMAVATHICHINNAGA</td>-->
+<!--            <td class="wbdv-password">Padmavathi$2919</td>-->
+<!--            <td class="wbdv-first-name">PADMAVATHI</td>-->
+<!--            <td class="wbdv-last-name">CHINNAGA</td>-->
+<!--            <td class="wbdv-role">Faculty</td>-->
+<!--            <td class="wbdv-actions">-->
+<!--                <span class="float-right">-->
+<!--                  <button class="wbdv-remove">Delete</button>-->
+<!--                  <button class="wbdv-edit">Update</button>-->
+<!--                </span>-->
+<!--            </td>-->
+<!--        </tr>-->
+
+
+        </thead>
+
+        <tbody class="wbdv-tbody">
+
+        </tbody>
+    </table>
+
+
+
+    </table>
+
+</div>
+</body>
+</html>
