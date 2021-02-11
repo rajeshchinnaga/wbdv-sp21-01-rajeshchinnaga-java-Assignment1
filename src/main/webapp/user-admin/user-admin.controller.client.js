@@ -18,19 +18,20 @@ function createUser(user){
             renderUsers(users)
         })
 }
+
 function deleteUser(event){
-        console.log(event.target)
-        var deleteBtn = jQuery(event.target)
-        var theIndex = deleteBtn.attr("id")
-        var theClass =deleteBtn.attr("class")
-        var theId = users[theIndex]._id
-        console.log(theIndex)
-        console.log(theClass)
-        adminUserService.deleteUser(theId)
-            .then(function (status){
-                users.splice(theIndex,1)
-                renderUsers(users)
-            })
+    console.log(event.target)
+    var deleteBtn = jQuery(event.target)
+    var theIndex = deleteBtn.attr("id")
+    var theClass =deleteBtn.attr("class")
+    var theId = users[theIndex]._id
+    console.log(theIndex)
+    console.log(theClass)
+    adminUserService.deleteUser(theId)
+        .then(function (status){
+            users.splice(theIndex,1)
+            renderUsers(users)
+        })
 }
 var selectedUser = null
 function selectUser(event) {
@@ -79,11 +80,10 @@ function renderUsers(users){
     for (var i = 0; i < users.length; i++) {
         var user = users[i]
         console.log(user)
-        console.log(user.Username)
         theTableBody.append(`
     <tr class="wbdv-template wbdv-user wbdv-hidden">
             <td class="wbdv-username">${user.Username}</td>
-            <td class="wbdv-password">${user.Password}</td>
+            <td class="wbdv-password"></td>
             <td class="wbdv-first-name">${user.FirstName}</td>
             <td class="wbdv-last-name">${user.LastName}</td>
             <td class="wbdv-role">${user.Role}</td>
@@ -113,7 +113,7 @@ function main(){
     $searchBtn = jQuery(".wbdv-search")
     $searchBtn.click(searchUser)
 
-    $createBtn.click(function (){
+    $createBtn.click(function () {
 
             var newUser = {
                 Username: $userName.val(),
@@ -137,4 +137,3 @@ function main(){
         })
 }
 jQuery(main)
-
